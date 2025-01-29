@@ -2,23 +2,37 @@
 
 export class ProductsPage {
 
-    productPageElements = {
-        addSauceLabsBackpack: () => cy.get('[data-test="add-to-cart-sauce-labs-backpack"]'),
-        removeSauceLabsBackpack: () => cy.get('[data-test="remove-sauce-labs-backpack"]'),
+    elements = {
+        addBackpack: () => cy.get('[data-test="add-to-cart-sauce-labs-backpack"]'),
+        removeBackpack: () => cy.get('[data-test="remove-sauce-labs-backpack"]'),
+        addRedShirt: () => cy.get('[data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]'),
+        removeRedShirt: () => cy.get('[data-test="remove-test.allthethings()-t-shirt-(red)"]'),
         shoppingCartButton: () => cy.get('[data-test="shopping-cart-link"]'),
         cartBadgeNumber: () => cy.get('[data-test="shopping-cart-badge"]')
     };
 
     cartButtonExists(){
-        this.productPageElements.shoppingCartButton().should("be.visible");  
+        this.elements.shoppingCartButton().should("be.visible");  
+    };
+
+    clickCartButton(){
+        this.elements.shoppingCartButton().click();  
     };
 
     addBackpackToCart(){
-        this.productPageElements.addSauceLabsBackpack().click();        
+        this.elements.addBackpack().click();        
     };
 
-    verifyRemoveButton(){
-        this.productPageElements.removeSauceLabsBackpack().should("be.visible");  
+    verifyRemoveBackpackButton(){
+        this.elements.removeBackpack().should("be.visible");  
+    };
+
+    addRedShirtToCart(){
+        this.elements.addRedShirt().click();        
+    };
+
+    verifyRemoveRedShirtButton(){
+        this.elements.removeRedShirt().should("be.visible");  
     };
 
 }

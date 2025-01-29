@@ -2,7 +2,7 @@
 
 export class LoginPage {
 
-    loginPageElements = {
+    elements = {
         userNameInput: () => cy.get('[data-test="username"]'),
         passwordInput: () => cy.get('[data-test="password"]'),
         loginButton: () => cy.get('[data-test="login-button"]'),
@@ -10,23 +10,23 @@ export class LoginPage {
     };
 
     enterUsername(username){
-        this.loginPageElements.userNameInput().type(username);  
+        this.elements.userNameInput().type(username);  
     };
 
     clearUsername(){
-        this.loginPageElements.userNameInput().clear();        
+        this.elements.userNameInput().clear();        
     };
 
     enterPassword(password){
-        this.loginPageElements.passwordInput().type(password);        
+        this.elements.passwordInput().type(password);        
     };
 
     clearPassword(){
-        this.loginPageElements.passwordInput().clear();        
+        this.elements.passwordInput().clear();        
     };
 
     clickLoginButton(){
-        this.loginPageElements.loginButton().click();        
+        this.elements.loginButton().click();        
     };
 
     login(username, password){
