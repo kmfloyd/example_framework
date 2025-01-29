@@ -1,0 +1,23 @@
+{
+  "name": "example_framework",
+  "version": "1.0.0",
+  "description": "example E2E test automation framework, written in cypress / javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmfloyd/example_framework.git"
+  },
+  "author": "Mike Floyd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmfloyd/example_framework/issues"
+  },
+  "homepage": "https://github.com/kmfloyd/example_framework#readme",
+  "devDependencies": {
+    "cypress": "^14.0.0",
+    "mochawesome": "^7.1.3"
+  }
+}
