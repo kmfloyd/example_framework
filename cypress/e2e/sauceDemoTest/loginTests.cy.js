@@ -14,7 +14,7 @@ describe('tests for login page', () => {
 
     it('logs in with bad credentials, validates error message', () => {
         cy.loginToSauceDemo('standard_user', 'wrong_sauce');
-        loginPage.loginPageElements.errorMessage().should('be.visible');
+        loginPage.elements.errorMessage().should('be.visible');
         loginPage.clearUsername();
         loginPage.clearPassword();
     });

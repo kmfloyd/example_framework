@@ -16,8 +16,8 @@ describe('tests for products page', () => {
         cy.loginToSauceDemo('standard_user', 'secret_sauce');
         productsPage.cartButtonExists();
         productsPage.addBackpackToCart();
-        productsPage.verifyRemoveButton();
-        productsPage.productPageElements.cartBadgeNumber().should('have.text', '1');
+        productsPage.verifyRemoveBackpackButton();
+        productsPage.elements.cartBadgeNumber().should('have.text', '1');
     });
 
 });
