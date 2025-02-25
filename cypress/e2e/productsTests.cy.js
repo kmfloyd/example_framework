@@ -12,7 +12,7 @@ describe('tests for products page', () => {
     let loginPage = new LoginPage();
     let productsPage = new ProductsPage();
 
-    it('logs in, then adds item to cart', () => {
+    it.only('logs in, then adds item to cart', () => {
         cy.loginToSauceDemo('standard_user', 'secret_sauce');
         productsPage.cartButtonExists();
         productsPage.addBackpackToCart();

@@ -24,7 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-import { LoginPage } from "./pageObjects/loginPage";
+import { LoginPage } from "../pages/loginPage";
 
 
 

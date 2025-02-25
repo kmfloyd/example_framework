@@ -20,7 +20,7 @@ describe('tests for login page', () => {
     let overviewPage = new OverviewPage();
     let completePage = new CompletePage();
 
-    it('logs in, adds item to cart, then checks out', () => {
+    it.only('logs in, adds item to cart, then checks out', () => {
         // login
         cy.loginToSauceDemo('standard_user', 'secret_sauce')
         // add items to cart
